@@ -23,7 +23,6 @@
   object-fit: cover;
 }
 
-/* Expanding ripple effect */
 .blinking-circular-button::before,
 .blinking-circular-button::after {
   content: "";
@@ -39,7 +38,6 @@
   animation: ripple-effect 2.5s infinite ease-out;
 }
 
-/* Second ripple with a delay for continuous creation */
 .blinking-circular-button::after {
   animation-delay: 1.25s;
 }

@@ -10,6 +10,7 @@ import PressReleasePage from "./pages/PressReleasePage/PressReleasePage";
 import ServicePage from "./pages/ServicePage/ServicePage";
 import ServicesOverlay from "./components/NormalComponents/ServicesOverlay/ServicesOverlay";
 import BlogPage from "./pages/PressReleasePage/BlogPage/BlogPage";
+import AnimatedContactButton from "./components/UI/AnimatedContactButton/AnimatedContactButton";
 
 const routes = [
   { path: "/", element: <HomePage /> },
@@ -47,7 +48,7 @@ const App = () => {
   return (
     <>
       <Header />
-      {/* <AnimatedContactButton /> */}
+      <AnimatedContactButton />
       <CustomRoutes />
       {!isHomePage && <Footer className={styles.Footer} />}
       <ContactUsOverlay />

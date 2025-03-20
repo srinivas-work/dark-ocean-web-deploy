@@ -64,12 +64,6 @@ body {
   min-height: 100vh;
 }
 
-.no-scroll {
-  position: fixed;
-  width: 100%;
-  top: var(--scroll-y);
-}
-
 h1 {
   font-size: 3.2rem;
   line-height: 4.2rem;

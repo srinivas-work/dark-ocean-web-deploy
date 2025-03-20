@@ -12,24 +12,6 @@ const CustomLoader = () => {
       animate={progress === 100 ? { y: "-110vh" } : { y: 0 }}
       transition={{ ease: "easeOut", delay: 0.5, duration: 0.8 }}
     >
-      {/* <div className={styles.loaderInnerContainer}>
-        <div className={styles.circularBorder}>
-          <div
-            className={styles.progressFill}
-            style={{
-              transform: `rotate(${(progress / 100) * 360}deg)`,
-            }}
-          />
-        </div>
-        <p className={styles.progressText}>{Math.round(progress)}%</p>
-      </div> */}
-      {/* <DotLottieReact
-        className={styles["animated-contact-btn"]}
-        src="/animation/logoAnimation.json"
-        //loop
-        autoplay
-      /> */}
-
       <div className={styles["loader-container"]}>
         <div className={styles["wave-fill"]}>
           <div className={styles.water}>
@@ -37,10 +19,7 @@ const CustomLoader = () => {
             <span className={styles["deep-water"]}></span>
           </div>
         </div>
-        {/* <div
-        ref={animationContinerRef}
-        style={{ width: "100vw", height: "100vh" }}
-      /> */}
+        <p className={styles.progressText}>{Math.round(progress)}%</p>
       </div>
     </motion.div>
   );

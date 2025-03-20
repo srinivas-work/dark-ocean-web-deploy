@@ -45,7 +45,7 @@ const ServicePage = () => {
         onClick={toggle}
       />
       <BlinkingCircularButton
-        style={{ position: "absolute", top: "80%", left: "32%" }} // 40rem = 640px → (640 / 800) * 100% = 80%; 20rem = 320px → (320 / 1000) * 100% = 32%
+        style={{ position: "absolute", top: "50%", left: "32%" }} // 40rem = 640px → (640 / 800) * 100% = 80%; 20rem = 320px → (320 / 1000) * 100% = 32%
         onClick={toggle}
       />
       <BlinkingCircularButton

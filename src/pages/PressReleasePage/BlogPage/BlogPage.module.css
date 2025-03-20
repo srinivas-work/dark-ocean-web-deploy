@@ -123,24 +123,6 @@
   cursor: pointer;
 }
 
-.blogCards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(12.5rem, 1fr));
-  gap: 0.625rem;
-}
-
-.card {
-  background: #f8f8f8;
-  padding: 0.625rem;
-  border-radius: 0.3125rem;
-  text-align: center;
-}
-
-.card img {
-  width: 100%;
-  border-radius: 0.3125rem;
-}
-
 .bottom-container {
   border-top: 1px solid black;
   display: flex;
