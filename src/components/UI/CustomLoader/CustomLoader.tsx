@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
-import styles from "./CustomLoader.module.css"; // Import the CSS Module
 import { useCustomLoaderStore } from "../../../../store/useCustomLoader";
+import styles from "./CustomLoader.module.css"; // Import the CSS Module
 
 const CustomLoader = () => {
   const { progress } = useCustomLoaderStore();
@@ -12,8 +12,7 @@ const CustomLoader = () => {
       animate={progress === 100 ? { y: "-110vh" } : { y: 0 }}
       transition={{ ease: "easeOut", delay: 0.5, duration: 0.8 }}
     >
-      <div className={styles.loaderInnerContainer}>
-        {/* Circular border */}
+      {/* <div className={styles.loaderInnerContainer}>
         <div className={styles.circularBorder}>
           <div
             className={styles.progressFill}
@@ -22,8 +21,26 @@ const CustomLoader = () => {
             }}
           />
         </div>
-        {/* Progress text */}
         <p className={styles.progressText}>{Math.round(progress)}%</p>
+      </div> */}
+      {/* <DotLottieReact
+        className={styles["animated-contact-btn"]}
+        src="/animation/logoAnimation.json"
+        //loop
+        autoplay
+      /> */}
+
+      <div className={styles["loader-container"]}>
+        <div className={styles["wave-fill"]}>
+          <div className={styles.water}>
+            <span className={styles.wave}></span>
+            <span className={styles["deep-water"]}></span>
+          </div>
+        </div>
+        {/* <div
+        ref={animationContinerRef}
+        style={{ width: "100vw", height: "100vh" }}
+      /> */}
       </div>
     </motion.div>
   );
