@@ -1,0 +1,37 @@
+.scroll-down-text-container {
+  width: 100vw;
+  height: 8vh;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.scroll-down-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(139, 139, 139);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1.2rem;
+}
+
+@media screen and (max-width: 700px) {
+  .scroll-down-text-container {
+    width: 100vw;
+    /* height: 8vh; */
+    position: fixed;
+    top: 90vh;
+  }
+  .scroll-down-text {
+    width: 80%;
+    margin: auto;
+
+    letter-spacing: 0.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+  }
+}

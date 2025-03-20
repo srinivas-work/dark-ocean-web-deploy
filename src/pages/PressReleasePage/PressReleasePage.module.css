@@ -1,0 +1,90 @@
+.press-release-page {
+  width: 90%;
+  height: fit-content;
+  margin: 13vh auto;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.press-release-category-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.press-release-page-categories {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--secondary-blue);
+}
+
+.press-release-page-categories li {
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+
+.press-release-page-categories li::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+  width: 0; /* Start with no width */
+  height: 2px; /* Thickness of the line */
+  background-color: var(--primary-blue);
+  transition: width 0.5s ease-in-out; /* Smooth animation */
+}
+
+.press-release-page-categories li:hover {
+  color: var(
+    --primary-blue
+  ) !important; /*Adding important to override js color*/
+}
+
+.press-release-page-categories li:hover::after {
+  width: 100%; /* Expands the line to full width on hover */
+}
+
+.press-release-page-cards-holder {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(10rem, 1fr)); /* Flexible grid */
+  gap: 3rem;
+  justify-content: center;
+}
+
+.search-error-message {
+  margin: auto;
+}
+
+@media screen and (max-width: 600px) {
+  .press-release-page {
+    width: 85%;
+    gap: 3rem;
+  }
+  .press-release-category-bar {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .press-release-page-categories {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 0rem;
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--secondary-blue);
+  }
+
+  .press-release-page-cards-holder {
+    grid-template-columns: 1fr; /* Flexible grid */
+    gap: 3rem;
+    justify-content: center;
+  }
+}

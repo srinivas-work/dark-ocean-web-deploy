@@ -1,0 +1,21 @@
+.partnersSection {
+  background: white;
+  padding: 2.5rem;
+}
+
+.partnersGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(5rem, 1fr));
+  gap: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .partnersSection {
+    background: white;
+    padding: 0rem;
+  }
+  .partnersGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}

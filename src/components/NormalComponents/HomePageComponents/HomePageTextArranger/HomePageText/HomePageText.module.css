@@ -1,0 +1,109 @@
+.homepage-text-container-parent {
+  position: absolute;
+  top: 0;
+  z-index: 5;
+  pointer-events: none;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  margin-left: var(--spacing);
+  color: white;
+}
+
+.homepage-text-container {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.homepage-text-container.add-blur-bg {
+  position: relative;
+  padding: 2.5rem;
+  border-radius: 3rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+}
+
+.homepage-text-container h2 {
+  margin-top: -0.5rem;
+  font-size: var(--heading-font-size);
+  line-height: var(--heading-line-height);
+}
+
+.homepage-text-container h4 {
+  font-size: var(--secondary-heading-font-size);
+  text-transform: uppercase;
+  color: var(--light-gray-color);
+  cursor: pointer;
+}
+
+.homepage-text-container p {
+  font-size: var(--paragraph-font-size);
+  line-height: var(--paragraph-line-height);
+  width: 90%;
+  color: var(--light-gray-color);
+}
+
+.homepage-service-btn {
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+  pointer-events: auto;
+  border-radius: 999px;
+  transform: all 0.5s ease-in;
+}
+
+.homepage-service-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300%;
+  height: 300%;
+  background: var(--secondary-blue);
+  transition: transform 0.5s ease-in;
+  transform: translate(-50%, -50%) scale(0);
+  transform-origin: bottom left;
+  border-radius: 999px;
+  z-index: -1;
+}
+
+.homepage-service-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  transition: background-color 0.5s ease-in;
+  z-index: -2;
+}
+
+.homepage-service-btn:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.homepage-service-btn:hover::after {
+  background-color: transparent;
+}
+
+.homepage-service-btn:hover {
+  color: white;
+}
+
+@media screen and (max-width: 700px) {
+  .homepage-text-container {
+    min-width: 90%;
+  }
+}

@@ -1,0 +1,57 @@
+.missionContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--primary-blue);
+  padding: 2.5rem;
+}
+
+.imageSection {
+  flex: 1;
+  overflow: hidden; /* Ensures zoom effect stays within bounds */
+  display: flex;
+  transition: all 0.7s ease-in-out;
+}
+
+.imageSection:hover {
+  border-radius: 4.5rem;
+}
+
+.missionImage {
+  transform: scale(1.05);
+  transition: transform 0.7s ease-out;
+}
+
+.imageSection:hover .missionImage {
+  transform: scale(1.15);
+}
+
+.textSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding-left: 2.5rem;
+}
+
+.missionItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.missionNumber {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.missionTitle {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+.missionDescription {
+  font-size: 1rem;
+  max-width: 31.25rem;
+  line-height: 1.5;
+}

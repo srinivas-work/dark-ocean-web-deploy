@@ -1,0 +1,88 @@
+.partnerCard {
+  max-height: fit-content;
+  position: relative;
+  border-radius: 2.5rem;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.7s ease-in-out;
+  cursor: pointer;
+  overflow: hidden;
+  /* box-shadow: 4px 8px 16px hsl(0deg 0% 0% / 0.05); */
+}
+
+.partnerCard::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  transition: all 1s ease-in-out;
+  color: white;
+}
+
+.partnerCard:hover::after {
+  background-color: rgba(0, 40, 79, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+.partnerCard:hover {
+  transform: translate3d(0, -0.5rem, 0);
+  border-radius: 3.5rem;
+  box-shadow: 8px 16px 16px hsl(0deg 0% 0% / 0.1);
+}
+
+.partner-card-description {
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  opacity: 0;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  transition: opacity 1s ease-in-out;
+}
+
+.partner-card-description * {
+  color: white;
+}
+
+.partner-card-description-title-container b {
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+
+.partnerCard:hover .partner-card-description {
+  opacity: 1;
+}
+
+/* .partnerCard:hover {
+    transform: scale(1.05);
+  } */
+
+.partnerImage {
+  max-width: 20rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: invert(100%);
+}
+
+@media screen and (max-width: 600px) {
+  .partnerCard {
+    border-radius: 1.5rem;
+    padding: 1rem;
+  }
+
+  .partnerCard:hover {
+    transform: none;
+    border-radius: initial;
+    box-shadow: none;
+  }
+}

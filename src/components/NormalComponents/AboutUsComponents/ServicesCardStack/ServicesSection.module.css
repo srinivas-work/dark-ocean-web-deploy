@@ -1,0 +1,55 @@
+.services-section {
+  margin: auto;
+  margin-top: 5rem;
+  margin-bottom: 6.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.services-section h1 {
+  width: 60%;
+}
+
+.services-section h3 {
+  margin-top: 2.5rem;
+  line-height: 2rem;
+  width: 60%;
+  margin-bottom: 5rem;
+}
+
+@media screen and (max-width: 700px) {
+  .services-section {
+    width: 90%;
+    margin-bottom: 10rem;
+  }
+
+  .services-section h1 {
+    width: 100%;
+  }
+
+  .services-section h3 {
+    margin-top: 1rem;
+    line-height: 2.5rem;
+    width: 80%;
+    margin-bottom: 7rem;
+  }
+}
+
+/* .overlapping-square-container {
+  position: relative;
+  margin-top: 100px;
+  height: 50vh;
+  z-index: 2;
+  .overlapping-square {
+    position: absolute;
+    height: 1550%;
+    width: 120%;
+    bottom: 0;
+    left: -10%;
+    background-color: blue;
+    z-index: 3;
+  }
+} */

@@ -1,0 +1,77 @@
+.dual-text-img-container {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr 1fr;
+  gap: 3rem;
+  grid-template-areas: "zero one two";
+  overflow: hidden;
+}
+
+.reversed {
+  grid-template-areas: "two one zero";
+}
+
+.dual-text-img-container img {
+  grid-area: zero;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.dual-text-img-text-container-first,
+.dual-text-img-text-container-second {
+  position: relative;
+  padding-left: 1rem;
+}
+
+.dual-text-img-text-container-first {
+  grid-area: one;
+}
+
+.dual-text-img-text-container-second {
+  grid-area: two;
+}
+
+.dual-text-img-text-container-first::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background-color: var(--secondary-blue);
+}
+
+.dual-text-img-text-container-second::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 60%;
+  background-color: var(--secondary-blue);
+}
+
+.dual-text-img-container h4 {
+  font-size: 1.2rem;
+}
+
+.dual-text-img-container p {
+  font-size: 0.8rem;
+}
+
+@media screen and (max-width: 700px) {
+  .dual-text-img-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .dual-text-img-text-container-first,
+  .dual-text-img-text-container-second {
+    padding-left: 1rem;
+  }
+
+  .dual-text-img-container h4 {
+    font-size: 1rem;
+  }
+}

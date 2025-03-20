@@ -1,0 +1,32 @@
+.address-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.8rem;
+  border-radius: 2rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: 1px solid #cacaca;
+  font-size: 0.85rem;
+}
+
+.address-card-place-name {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.address-details-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.address-details-container img {
+  margin-top: 0.2rem;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.address-details-container .address-details-phone-icon {
+  width: 1rem;
+  height: 1rem;
+}

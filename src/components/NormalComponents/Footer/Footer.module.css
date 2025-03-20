@@ -1,0 +1,131 @@
+.footer {
+  /* position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0; */
+  width: 100vw;
+  height: 55vh;
+  background-color: var(--primary-dark);
+  text-align: left;
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer * {
+  color: white;
+}
+
+.footer-details-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: start;
+  width: 90vw;
+  margin: auto;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin: 0.3125rem 0;
+  max-width: 80%;
+  color: rgb(169, 169, 169);
+  font-size: 0.8rem;
+}
+
+.footer-details-container ul .footer-contact-details {
+  color: white;
+}
+
+.contact ul li:first-child {
+  margin-bottom: 1rem;
+}
+
+.footer-headings {
+  font-size: 1rem;
+  margin-bottom: 0.625rem;
+}
+
+.certifications-logo-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.certifications-logo-container img {
+  width: 10rem;
+  object-fit: cover;
+}
+
+.footer .bottom {
+  width: 90%;
+  padding: 0.3rem 0;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer .bottom li {
+  font-size: 0.7rem;
+}
+
+.footer .bottom li:first-child {
+  font-weight: bold;
+  color: white;
+}
+
+.dark-ocean-map-link {
+  margin-top: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.border-line {
+  height: 0.1px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/*For bigger screens*/
+@media screen and (min-width: 600px) {
+  .menu,
+  .services,
+  .contact,
+  .achilles-logo {
+    flex: 1;
+    min-width: 12.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer {
+    height: fit-content;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .footer-details-container {
+    gap: 2.5rem;
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .certifications-logo-container {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footer .bottom {
+    width: 100%;
+    flex-direction: column;
+    align-items: start;
+    padding: 2rem;
+  }
+}

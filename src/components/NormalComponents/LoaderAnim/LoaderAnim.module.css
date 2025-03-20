@@ -1,0 +1,68 @@
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5000;
+  box-sizing: border-box;
+}
+
+.wave-fill {
+  height: 50px;
+  width: 350px;
+  background-color: #656565;
+  mask-image: url("/img/dark-ocean-logo.svg");
+  mask-repeat: no-repeat;
+  mask-size: contain;
+}
+
+span {
+  display: block;
+  width: 100%;
+}
+
+.wave {
+  height: 1.3rem;
+  background: url("/img/wave.svg");
+  background-size: contain;
+  animation-delay: 0s;
+  animation: wave-animation 5s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+  will-change: background-position;
+}
+
+.deep-water {
+  background: #ffffff;
+  height: 200px;
+}
+
+.water {
+  animation-delay: 0s;
+  animation: water-animation 5s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+  will-change: transform;
+}
+
+@keyframes water-animation {
+  from {
+    transform: translateY(10%);
+  }
+  to {
+    transform: translateY(-10%);
+  }
+}
+
+@keyframes wave-animation {
+  0% {
+    background-position: -5% 0;
+  }
+  10% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}

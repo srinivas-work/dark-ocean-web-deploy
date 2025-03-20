@@ -1,0 +1,105 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color: white;
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --heading-font-size: 2.3rem;
+  --heading-line-height: 3.3rem;
+
+  --secondary-heading-font-size: 1.1rem;
+
+  --paragraph-font-size: 1.1rem;
+  --paragraph-line-height: 1.7rem;
+
+  --light-gray-color: #9e9e9e;
+
+  --primary-dark: #1a1a1a;
+  --primary-blue: #00284f;
+  --secondary-blue: #114ec9;
+  --primary-orange: #ee7321;
+  --primary-gray: #535353;
+  --light-gray: #efeeee;
+
+  --spacing: 4rem;
+}
+
+:root:has(.no-doc-scroll) {
+  overflow: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  /* overflow: hidden; */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+body {
+  position: relative;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+.no-scroll {
+  position: fixed;
+  width: 100%;
+  top: var(--scroll-y);
+}
+
+h1 {
+  font-size: 3.2rem;
+  line-height: 4.2rem;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  border: none;
+  outline: none;
+}
+
+@media screen and (max-width: 700px) {
+  :root {
+    --heading-font-size: 1.8rem;
+    --heading-line-height: 2.3rem;
+
+    --secondary-heading-font-size: 0.8rem;
+
+    --spacing: 2rem;
+  }
+  h1 {
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}

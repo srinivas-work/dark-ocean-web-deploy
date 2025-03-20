@@ -1,0 +1,31 @@
+.searchBar {
+  display: flex;
+  align-items: center;
+  background: #e9eff6; /* Light blue-gray background */
+  border-radius: 1.5rem;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  max-width: 20rem;
+  height: 3rem; /* Fixed height */
+}
+
+.icon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.5rem;
+}
+
+.input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 1rem;
+  flex-grow: 1; /* Ensures input expands properly */
+}
+
+@media screen and (max-width: 600px) {
+  .searchBar {
+    width: 100%;
+    max-width: none;
+  }
+}

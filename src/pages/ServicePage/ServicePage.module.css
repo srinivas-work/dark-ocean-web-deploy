@@ -1,0 +1,42 @@
+.service-page {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: center;
+}
+
+.service-page-header-img-wrapper {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; /* Hides the image edges */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px; /* Adds depth effect */
+}
+
+.service-page-header-img {
+  width: 130%; /* Slightly larger to prevent edges from showing */
+  height: 130%;
+  object-fit: cover;
+  transition: transform 0.3s ease-out;
+  transform-origin: center;
+}
+
+@media screen and (max-width: 600px) {
+  .service-page {
+    width: 100vw;
+    overflow: hidden;
+  }
+
+  .service-page-header-img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* .service-page-header-img:hover {
+  transform: rotate3d(1, 1, 0, 10deg);
+} */

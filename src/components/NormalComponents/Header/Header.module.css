@@ -1,0 +1,28 @@
+.Header {
+  position: fixed;
+  box-sizing: border-box;
+  top: 0;
+  height: 7vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--spacing);
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  border-bottom: 1px solid;
+}
+
+.Header a {
+  display: flex;
+  align-items: center;
+}
+
+.Header img {
+  width: 12rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+}
