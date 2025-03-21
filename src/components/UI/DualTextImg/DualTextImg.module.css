@@ -14,6 +14,7 @@
   grid-area: zero;
   width: 100%;
   height: 100%;
+  max-height: 15rem;
   object-fit: cover;
 }
 

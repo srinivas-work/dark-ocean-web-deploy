@@ -23,7 +23,7 @@ const TimelineCarousel: React.FC<{
   dataSet: TimelineItemType[];
   scaleAnimate?: boolean;
 }> = ({ showImg, showHeading, scaleAnimate, dataSet }) => {
-  const targetRef = useRef<HTMLDivElement | null>(null);
+  const targetRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: targetRef });
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -95,7 +95,7 @@ const TimelineCarousel: React.FC<{
               className={styles["video-background"]}
             >
               <source
-                src="/video/about-us/water_splash_white_bg.mp4"
+                src="/video/about-us/boat_animation.mp4"
                 type="video/mp4"
               />
             </video>

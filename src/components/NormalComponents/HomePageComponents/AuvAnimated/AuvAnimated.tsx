@@ -47,7 +47,7 @@ const AuvAnimated = () => {
 
   return (
     <div ref={containerRef} className={styles["auv-animated-container-parent"]}>
-      <DotLottieReact src="/animation/auv_animated_rev.json" loop autoplay />
+      <DotLottieReact src="/animation/auv_animated.json" loop autoplay />
     </div>
   );
 };

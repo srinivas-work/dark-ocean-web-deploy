@@ -1,0 +1,64 @@
+.service-overlay-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  max-width: 100vw;
+  max-height: 100vh;
+  z-index: 1200;
+  background-color: rgba(0, 40, 79, 0.8);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  color: white;
+  transform: translateZ(0);
+  padding: 15rem 5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-content: center;
+  gap: 1rem;
+}
+
+.service-heading-container {
+  margin-right: auto;
+  display: flex;
+}
+
+.service-overlay-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/img/service-page/DO_Pattern.svg");
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.15; /* Reduces only image opacity */
+  pointer-events: none; /* Ensures it doesn't block interactions */
+  z-index: -1; /* Places it behind the content */
+}
+
+.accordion-description {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+@media screen and (max-width: 700px) {
+  .service-overlay-container {
+    padding: 2.5rem;
+    padding-top: 4rem;
+    justify-content: unset;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+
+  .service-heading-container {
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .accordion-description {
+    gap: 4rem;
+  }
+}

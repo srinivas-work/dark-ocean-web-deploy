@@ -1,0 +1,144 @@
+.contactContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1200;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  place-items: center;
+  background-color: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  padding: 0 5.5rem;
+  color: var(--primary-blue);
+  transform: translateZ(0);
+}
+
+.infoSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 90%;
+}
+
+.heading {
+  max-width: 85%;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 3.5rem;
+}
+
+.description {
+  margin-top: 1rem;
+  font-style: italic;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.contactDetails {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.contactItem {
+  margin-bottom: 1rem;
+}
+
+.contactItem h4 {
+  color: var(--secondary-blue);
+  margin-bottom: 0.3rem;
+}
+
+.contactForm {
+  max-width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  font-size: 0.85rem;
+}
+
+.contactForm * {
+  border-radius: 0.7rem;
+}
+
+.inputGroup {
+  display: flex;
+  gap: 1rem;
+}
+
+.inputField {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.inputField label {
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.inputField input,
+.inputField textarea {
+  font-size: inherit;
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+}
+
+.inputField textarea {
+  height: 120px;
+  resize: none;
+}
+
+.submitButton {
+  width: 100%;
+  background-color: var(--secondary-blue);
+  color: white;
+  font-size: 1rem;
+  padding: 0.8rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #3f75e0;
+}
+
+@media screen and (max-width: 600px) {
+  .contactContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin: auto;
+    padding: 2rem;
+    overflow-y: scroll;
+  }
+
+  .infoSection {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 100%;
+  }
+
+  .contactDetails {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .contactForm {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

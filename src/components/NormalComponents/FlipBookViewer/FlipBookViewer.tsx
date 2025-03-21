@@ -6,6 +6,11 @@ const FlipBookViewer = () => {
   const [isFlipbookOpen, setIsFlipbookOpen] = useState(false);
 
   const popupRef = useRef<HTMLDivElement>(null);
+  // const pdfUrl = encodeURIComponent(
+  //   "https://www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf"
+  // );
+
+  const [pdfUrl, setPdfUrl] = useState<string | null>(null);
 
   const openFlipBook = () => {
     setIsFlipbookOpen(true);
@@ -14,6 +19,27 @@ const FlipBookViewer = () => {
   const closePopup = () => {
     setIsFlipbookOpen(false);
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      localStorage.setItem(
+        "pdfToLoad",
+        "/pdf-proxy/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf"
+      );
+
+      const pdfUrlG = localStorage.getItem("pdfToLoad");
+
+      if (pdfUrlG) {
+        fetch(pdfUrlG)
+          .then((res) => res.blob()) // Convert to Blob
+          .then((blob) => {
+            const blobUrl = URL.createObjectURL(blob); // Create a Blob URL
+            setPdfUrl(blobUrl); // Store the Blob URL
+          })
+          .catch((err) => console.error("Failed to load PDF:", err));
+      }
+    }, 1000);
+  }, []);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -61,8 +87,9 @@ const FlipBookViewer = () => {
             <embed
               className={styles["flip-book-container"]}
               ref={embedRef}
-              src="/flipBook/index.html"
-              title="Primsy Flipbook"
+              //src="/flipBook/index.html"
+              src={`/flipBook/index.html?pdf=${pdfUrl}`}
+              title="Dark Ocean Flipbook"
             />
           </div>
         </div>
