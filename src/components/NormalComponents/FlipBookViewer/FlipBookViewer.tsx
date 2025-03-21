@@ -24,7 +24,7 @@ const FlipBookViewer = () => {
     setTimeout(() => {
       localStorage.setItem(
         "pdfToLoad",
-        "/pdf-proxy/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf"
+        "https://cors-anywhere.herokuapp.com/https://www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf"
       );
 
       const pdfUrlG = localStorage.getItem("pdfToLoad");
