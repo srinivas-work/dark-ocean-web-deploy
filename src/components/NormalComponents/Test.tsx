@@ -1,9 +1,6 @@
 import { useEffect } from "react";
 
 const Test = () => {
-  const jwtToken =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQyODAzODIxLCJleHAiOjE3NDUzOTU4MjF9.aY_nNLmUqauEcgRp9fcy2tCwjG-ZSTK6lqV3Aqp3fDY";
-
   useEffect(() => {
     const loginUser = async () => {
       const res = await fetch(
