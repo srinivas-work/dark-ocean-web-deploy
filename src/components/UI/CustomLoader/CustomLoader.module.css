@@ -81,7 +81,7 @@
   .progressText {
     position: absolute;
     left: 50%;
-    bottom: 2rem;
+    bottom: 3rem;
     transform: translate(-50%, 0);
     color: rgb(114, 114, 114);
     margin: 0;

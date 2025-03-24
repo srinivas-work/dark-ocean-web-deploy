@@ -67,7 +67,7 @@ const HomePage = () => {
           top: 0, //"-66.5vh"
           left: 0,
           right: 0,
-          width: "100vw",
+          width: "100%",
           height: "100vh",
           display: "flex",
           justifyContent: "center",
