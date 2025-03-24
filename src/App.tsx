@@ -11,6 +11,7 @@ import HomePage from "./pages/HomePage/HomePage";
 import BlogPage from "./pages/PressReleasePage/BlogPage/BlogPage";
 import PressReleasePage from "./pages/PressReleasePage/PressReleasePage";
 import ServicePage from "./pages/ServicePage/ServicePage";
+import Test from "./components/NormalComponents/Test";
 
 const routes = [
   { path: "/", element: <HomePage /> },
@@ -48,6 +49,7 @@ const App = () => {
   return (
     <>
       <Header />
+      <Test />
       <AnimatedContactButton />
       <CustomRoutes />
       {!isHomePage && <Footer className={styles.Footer} />}

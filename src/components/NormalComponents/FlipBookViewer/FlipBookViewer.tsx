@@ -10,7 +10,8 @@ const FlipBookViewer = () => {
   //   "https://www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf"
   // );
 
-  const [pdfUrl, setPdfUrl] = useState<string | null>(null);
+  const pdfUrl =
+    "https://cors-anywhere.herokuapp.com/https://www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf";
 
   const openFlipBook = () => {
     setIsFlipbookOpen(true);
@@ -20,26 +21,26 @@ const FlipBookViewer = () => {
     setIsFlipbookOpen(false);
   };
 
-  useEffect(() => {
-    setTimeout(() => {
-      localStorage.setItem(
-        "pdfToLoad",
-        "https://cors-anywhere.herokuapp.com/https://www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf"
-      );
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     localStorage.setItem(
+  //       "pdfToLoad",
+  //       "https://cors-anywhere.herokuapp.com/https://www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf"
+  //     );
 
-      const pdfUrlG = localStorage.getItem("pdfToLoad");
+  //     const pdfUrlG = localStorage.getItem("pdfToLoad");
 
-      if (pdfUrlG) {
-        fetch(pdfUrlG)
-          .then((res) => res.blob()) // Convert to Blob
-          .then((blob) => {
-            const blobUrl = URL.createObjectURL(blob); // Create a Blob URL
-            setPdfUrl(blobUrl); // Store the Blob URL
-          })
-          .catch((err) => console.error("Failed to load PDF:", err));
-      }
-    }, 1000);
-  }, []);
+  //     if (pdfUrlG) {
+  //       fetch(pdfUrlG)
+  //         .then((res) => res.blob()) // Convert to Blob
+  //         .then((blob) => {
+  //           const blobUrl = URL.createObjectURL(blob); // Create a Blob URL
+  //           setPdfUrl(blobUrl); // Store the Blob URL
+  //         })
+  //         .catch((err) => console.error("Failed to load PDF:", err));
+  //     }
+  //   }, 1000);
+  // }, []);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {

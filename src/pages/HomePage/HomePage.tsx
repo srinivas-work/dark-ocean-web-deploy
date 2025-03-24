@@ -100,7 +100,7 @@ const HomePage = () => {
         {/* <RigAnimation /> */}
         <AdaptivePixelRatio />
         {/* <Suspense fallback={<CustomLoader />}> */}
-        <ScrollControls pages={8} distance={isPhoneScreen ? 4 : 2}>
+        <ScrollControls pages={8} distance={isPhoneScreen ? 3 : 2}>
           <CustomDreiScrollHelper />
           <Scroll html>
             <div style={{ height: "745vh" }} />
