@@ -70,7 +70,7 @@ const HomePageText: React.FC<
       className={styles["homepage-text-container-parent"]}
       style={
         centerText
-          ? { marginLeft: "0", ...{ ...props.style } }
+          ? { paddingLeft: "0", ...{ ...props.style } }
           : { ...{ ...props.style } }
       }
       initial={{ opacity: 0, y: 50 }} // Start faded and shifted down
