@@ -47,6 +47,7 @@
   .service-overlay-container {
     padding: 2.5rem;
     padding-top: 4rem;
+    place-content: unset;
     justify-content: unset;
     overflow-y: auto;
     overflow-x: hidden;
