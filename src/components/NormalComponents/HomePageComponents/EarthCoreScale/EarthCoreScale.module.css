@@ -56,15 +56,8 @@
 }
 
 @media screen and (max-width: 700px) {
-  .earth-core-scale-container {
-    max-height: 100vh;
-    height: auto;
-  }
   .earth-core-scale-img {
-    max-height: 73.5vh;
-  }
-
-  .earth-core-scale-info-parent {
-    max-height: 82vh;
+    height: 48rem;
+    clip-path: inset(0 0 70% 0);
   }
 }
