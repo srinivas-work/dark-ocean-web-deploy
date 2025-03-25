@@ -57,7 +57,7 @@
 
 @media screen and (max-width: 700px) {
   .earth-core-scale-img {
-    height: 48rem;
+    height: 18rem;
     clip-path: inset(0 0 70% 0);
   }
 }
