@@ -28,7 +28,10 @@ const Boat: React.FC<GroupProps> = ({ ...props }) => {
       ref={boatRef}
       position={isPhoneScreen ? [-0.22, -0.3, -1.5] : [0, 0, 0]}
     >
-      <ConcentricCirclesPlane position={[1.14, 0.24, 1]} scale={0.15} />
+      <ConcentricCirclesPlane
+        position={[isPhoneScreen ? 1.2 : 1.14, 0.24, 1]}
+        scale={0.15}
+      />
       <ConcentricCirclesPlane
         underWater
         position={[0.3, -2.5, 0]}

@@ -23,6 +23,7 @@
   object-fit: cover;
   transition: transform 0.3s ease-out;
   transform-origin: center;
+  object-position: 75% center;
 }
 
 @media screen and (max-width: 600px) {
