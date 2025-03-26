@@ -5,6 +5,7 @@ import { useContactOverlayStore } from "../../../../../store/useOverlay";
 import { placeList } from "../../../utils/data/dataHolder";
 import AddressCard from "../../../UI/Cards/AddressCard/AddressCard";
 import CloseButton from "../../../UI/CloseButton/CloseButton";
+import FlipBookViewer from "../../FlipBookViewer/FlipBookViewer";
 
 const ContactUsOverlay = () => {
   const { isOpen, toggle } = useContactOverlayStore();
@@ -60,9 +61,12 @@ const ContactUsOverlay = () => {
     >
       <div className={styles.infoSection}>
         <div>
-          <h2 className={styles.heading}>
-            Collaboration, work enquiries or just say hello.
-          </h2>
+          <div className={styles["info-heading-container"]}>
+            <h2 className={styles.heading}>
+              Collaboration, work enquiries or just say hello.
+            </h2>
+            <FlipBookViewer />
+          </div>
           <p className={styles.description}>
             <i>
               Basic Hydrography Survey to complex Seismic Surveys, we are here

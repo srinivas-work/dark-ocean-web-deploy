@@ -1,12 +1,21 @@
-import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import TopNav from "../../UI/TopNav/TopNav";
 import styles from "./Header.module.css";
+import { useCustomRouter } from "../../../../store/useCustomRouter";
 
 const Header = () => {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
   const [addBackground, setAddBackground] = useState(false);
+
+  const { chosenRoute } = useCustomRouter();
+  const navigate = useNavigate();
+
+  //Using custom navigation to avoid homepage navigation error
+  useEffect(() => {
+    navigate(chosenRoute);
+  }, [chosenRoute]);
 
   const getImgLink = (pageName: string) => {
     if (pageName.startsWith("/press-release")) {

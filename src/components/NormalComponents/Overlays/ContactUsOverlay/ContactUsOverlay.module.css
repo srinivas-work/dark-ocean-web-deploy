@@ -24,6 +24,10 @@
   max-width: 90%;
 }
 
+.info-heading-container {
+  display: flex;
+}
+
 .heading {
   max-width: 85%;
   font-size: 2.5rem;
@@ -117,6 +121,10 @@
     margin: auto;
     padding: 2rem;
     overflow-y: scroll;
+  }
+
+  .info-heading-container {
+    align-items: end;
   }
 
   .infoSection {

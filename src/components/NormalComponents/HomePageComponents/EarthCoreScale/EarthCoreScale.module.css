@@ -55,9 +55,9 @@
   object-fit: cover;
 }
 
-@media screen and (max-width: 700px) {
+/* @media screen and (max-width: 700px) {
   .earth-core-scale-img {
     height: 18rem;
     clip-path: inset(0 0 70% 0);
   }
-}
+} */

@@ -1,15 +1,30 @@
 import { HTMLProps, useRef } from "react";
+import { useCustomRouter } from "../../../../store/useCustomRouter";
+import { useServiceOverlayStore } from "../../../../store/useOverlay";
 import SocialMediaIconSet from "../../UI/SocialMediaIconSet/SocialMediaIconSet";
-import styles from "./Footer.module.css";
+import { navLinks, serviceList } from "../../utils/data/dataHolder";
 import useIsPhoneScreen from "../../utils/hooks/useIsPhoneScreen";
+import styles from "./Footer.module.css";
 
 const Footer: React.FC<HTMLProps<HTMLElement>> = ({ ...props }) => {
   const footerRef = useRef<HTMLElement>(null);
   const isMobileScreen = useIsPhoneScreen();
+  const { toggle } = useServiceOverlayStore();
+  const { setChosenRoute } = useCustomRouter();
 
   const mapClickHandler = () => {
     window.open("https://maps.app.goo.gl/4PE6kYdietdXar1X8", "_blank");
   };
+
+  // const getPageLinks = (path: string, label: string) => {
+  //   const currentPath = window.location.pathname;
+
+  //   if (currentPath === "/") {
+  //     return <a href={path}>{label}</a>;
+  //   }
+
+  //   return <Link to={path}>{label}</Link>;
+  // };
 
   return (
     <footer
@@ -20,27 +35,23 @@ const Footer: React.FC<HTMLProps<HTMLElement>> = ({ ...props }) => {
       <div className={styles["footer-details-container"]}>
         <div className={styles.menu}>
           <h3 className={styles["footer-headings"]}>Quick Menu</h3>
-          <ul>
-            <li>About us</li>
-            <li>Product & Services</li>
-            <li>Press release</li>
-            <li>Contact</li>
-            <li>Careers</li>
+          <ul className={styles["footer-clickable-list"]}>
+            {navLinks.map((navItem, index) => (
+              <li key={index} onClick={() => setChosenRoute(navItem.path)}>
+                {navItem.label}
+              </li>
+            ))}
           </ul>
         </div>
 
         <div className={styles.services}>
           <h3 className={styles["footer-headings"]}>Product & Services</h3>
-          <ul>
-            <li>Hydrography</li>
-            <li>Geophysics</li>
-            <li>2D/3D Seismic Survey</li>
-            <li>Positioning (Surface & Subsea)</li>
-            <li>ROV & Tooling</li>
-            <li>AI & ML</li>
-            <li>Robotics</li>
-            <li>Geotechnical Solutions</li>
-            <li>Vessel Management</li>
+          <ul className={styles["footer-clickable-list"]}>
+            {serviceList.map((service, index) => (
+              <li key={index} onClick={toggle}>
+                {service}
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -92,7 +103,10 @@ const Footer: React.FC<HTMLProps<HTMLElement>> = ({ ...props }) => {
         <div className={styles["border-line"]} />
         <ul className={styles.bottom}>
           <li>QATAR | KSA | UAE | UK | INDIA</li>
-          <li>&copy; 2025 All rights reserved. Copyright by Darkocean</li>
+          <li>
+            &copy; {new Date().getFullYear()} All rights reserved. Copyright by
+            Darkocean
+          </li>
           <li>GDPR | Privacy policy | Terms of service</li>
         </ul>
       </div>

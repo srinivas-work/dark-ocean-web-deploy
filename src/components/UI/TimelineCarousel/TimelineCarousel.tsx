@@ -95,7 +95,7 @@ const TimelineCarousel: React.FC<{
               className={styles["video-background"]}
             >
               <source
-                src="/video/about-us/boat_animation.mp4"
+                src="/video/about-us/boat_animation_revised.mp4"
                 type="video/mp4"
               />
             </video>

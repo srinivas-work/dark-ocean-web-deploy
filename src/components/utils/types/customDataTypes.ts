@@ -10,7 +10,7 @@ export type ServiceItemGroupType = {
   backgroundColor: string;
 };
 
-export type ServiceItemType = {
+export type AboutUsCardType = {
   id: string;
   title: string;
   path: string;

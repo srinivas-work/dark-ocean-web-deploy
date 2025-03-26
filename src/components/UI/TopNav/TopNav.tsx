@@ -79,18 +79,24 @@ const TopNav: React.FC<{ onHamburgerOpen: (isOpen: boolean) => void }> = ({
         ref={navRef}
       >
         <ul style={{ color: isHomePage ? "white" : "var(--primary-blue)" }}>
-          {navLinks.map(({ path, label }, index) => (
-            <li key={index} onClick={label === "Contact" ? toggle : undefined}>
-              {label === "Contact" ? label : <Link to={path}>{label}</Link>}
-            </li>
-          ))}
+          {navLinks.map(
+            ({ path, label }, index) =>
+              label !== "Career" && (
+                <li
+                  key={index}
+                  onClick={label === "Contact" ? toggle : undefined}
+                >
+                  {label === "Contact" ? label : <Link to={path}>{label}</Link>}
+                </li>
+              )
+          )}
           <li>
             <a
               href="https://www.linkedin.com/company/darkoceanmarine/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Careers
+              Career
             </a>
           </li>
         </ul>

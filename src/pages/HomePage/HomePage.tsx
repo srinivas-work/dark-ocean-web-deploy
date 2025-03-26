@@ -93,18 +93,14 @@ const HomePage = () => {
         }}
         // camera={{ fov: 100, near: 1000, far: 3500000 }}
       >
-        {/* <ControlsRegressor /> */}
-
         {/* <OrbitControls /> */}
         {/* <Perf position="top-left" /> */}
         {/* <RigAnimation /> */}
         <AdaptivePixelRatio />
-        {/* <Suspense fallback={<CustomLoader />}> */}
         <ScrollControls pages={8} distance={isPhoneScreen ? 1.7 : 2}>
           <CustomDreiScrollHelper />
           <Scroll html>
-            <div style={{ height: "745vh" }} />
-
+            <div style={{ height: isPhoneScreen ? "660vh" : "745vh" }} />
             <Footer />
           </Scroll>
           <Space />

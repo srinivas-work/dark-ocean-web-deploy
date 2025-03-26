@@ -20,6 +20,7 @@
   z-index: 3;
   cursor: pointer;
   transition: transform 0.5s ease-in-out;
+  user-select: none;
 }
 
 .animated-contact-btn-container:hover {

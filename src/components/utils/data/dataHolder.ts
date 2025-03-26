@@ -1,9 +1,9 @@
 import {
+  AboutUsCardType,
   EarthCoreScaleDataInfoType,
   PartnerDataItemType,
   PlaceItemType,
   PressItemType,
-  ServiceItemType,
   TimelineItemType,
 } from "../types/customDataTypes";
 
@@ -12,6 +12,7 @@ const navLinks = [
   { path: "/services", label: "Products & Services" },
   { path: "/press-release", label: "Press Release" },
   { path: "/contact", label: "Contact" },
+  { path: "/career", label: "Career" },
 ];
 
 const serviceList = [
@@ -25,6 +26,8 @@ const serviceList = [
   "Geotechnical Solutions",
   "Vessel Management",
 ];
+
+//const servicesList = []
 
 const missionData = [
   {
@@ -205,7 +208,7 @@ const earthCoreScaleData: EarthCoreScaleDataInfoType[] = [
   },
 ];
 
-const servicesList: ServiceItemType[] = [
+const aboutUsCardList: AboutUsCardType[] = [
   {
     id: "logo-design",
     title: "About Us",
@@ -415,16 +418,16 @@ const placeList: PlaceItemType[] = [
 ];
 
 export {
-  serviceList,
+  categoryList,
+  earthCoreScaleData,
   homepageData,
   missionData,
-  partnersData,
-  earthCoreScaleData,
-  servicesList,
-  timelineData,
-  sustainabilityData,
-  categoryList,
-  pressReleaseList,
-  placeList,
   navLinks,
+  partnersData,
+  placeList,
+  pressReleaseList,
+  serviceList,
+  sustainabilityData,
+  timelineData,
+  aboutUsCardList,
 };

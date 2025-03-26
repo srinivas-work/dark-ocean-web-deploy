@@ -1,11 +1,11 @@
 import { useScroll } from "framer-motion";
 import { useRef } from "react";
-import styles from "./ServicesSection.module.css";
-import ServicesCard from "../../../UI/Cards/ServicesCard/ServicesCard";
+import styles from "./AboutUsCardSection.module.css";
 import AnimatedText from "../../../UI/AnimatedText/AnimatedText";
-import { servicesList } from "../../../utils/data/dataHolder";
+import { aboutUsCardList } from "../../../utils/data/dataHolder";
+import AboutUsCard from "../../../UI/Cards/ServicesCard/AboutUsCard";
 
-const ServicesSection = () => {
+const AboutUsCardSection = () => {
   const serviceSectionRef = useRef<HTMLElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: serviceSectionRef,
@@ -26,11 +26,11 @@ const ServicesSection = () => {
       />
 
       <div className={styles["services-card-container"]}>
-        {servicesList.map((cardItem, index) => {
-          const targetScale = 1 - (servicesList.length - index) * 0.05;
+        {aboutUsCardList.map((cardItem, index) => {
+          const targetScale = 1 - (aboutUsCardList.length - index) * 0.05;
 
           return (
-            <ServicesCard
+            <AboutUsCard
               cardItem={cardItem}
               index={index}
               range={[index * 0.16, 1]}
@@ -45,4 +45,4 @@ const ServicesSection = () => {
   );
 };
 
-export default ServicesSection;
+export default AboutUsCardSection;

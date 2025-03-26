@@ -25,6 +25,16 @@
   width: 90vw;
   margin: auto;
 }
+.footer-clickable-list li,
+.footer-clickable-list li a {
+  color: rgb(169, 169, 169);
+  transition: opacity 0.5s ease-in-out;
+  cursor: pointer;
+}
+.footer-clickable-list li:hover,
+.footer-clickable-list li a:hover {
+  opacity: 0.5;
+}
 
 .footer ul {
   list-style: none;

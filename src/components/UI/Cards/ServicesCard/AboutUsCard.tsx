@@ -1,15 +1,15 @@
-import styles from "./ServicesCard.module.css";
+import styles from "./AboutUsCard.module.css";
 import { MotionValue, motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { ServiceItemType } from "../../../utils/types/customDataTypes";
+import { AboutUsCardType } from "../../../utils/types/customDataTypes";
 
-const ServicesCard: React.FC<
+const AboutUsCard: React.FC<
   React.HTMLProps<HTMLDivElement> & {
     index: number;
     range: number[];
     targetScale: number;
     parentScrollProgress: MotionValue<number>;
-    cardItem: ServiceItemType;
+    cardItem: AboutUsCardType;
   }
 > = ({ index, range, targetScale, parentScrollProgress, cardItem }) => {
   const cardContainerRef = useRef<HTMLDivElement | null>(null);
@@ -26,28 +26,28 @@ const ServicesCard: React.FC<
   const scale = useTransform(parentScrollProgress, range, [1, targetScale]);
 
   return (
-    <div className={styles["services-card-container"]} ref={cardContainerRef}>
+    <div className={styles["about-us-card-container"]} ref={cardContainerRef}>
       <motion.div
-        className={styles["services-card"]}
+        className={styles["about-us-card"]}
         style={{
           scale,
           backgroundColor: cardItem.backgroundColor,
           top: `calc(-12% + ${index * 20}px)`,
         }}
       >
-        <div className={styles["services-card-content"]}>
-          <div className={styles["services-card-description"]}>
+        <div className={styles["about-us-card-content"]}>
+          <div className={styles["about-us-card-description"]}>
             <h2 style={{ color: "inherit" }}>{cardItem.title}</h2>
             <p style={{ color: "inherit" }}>{cardItem.description}</p>
             {/* <button>Check Our Work</button> */}
           </div>
-          <div className={styles["services-card-img-container"]}>
+          <div className={styles["about-us-card-img-container"]}>
             <motion.div
               style={{ scale: imgScale }}
-              className={styles["services-card-img-container-inner"]}
+              className={styles["about-us-card-img-container-inner"]}
             >
               <img
-                className={styles["services-card-img"]}
+                className={styles["about-us-card-img"]}
                 src={cardItem.imgLink}
                 alt="Image"
               />
@@ -59,4 +59,4 @@ const ServicesCard: React.FC<
   );
 };
 
-export default ServicesCard;
+export default AboutUsCard;

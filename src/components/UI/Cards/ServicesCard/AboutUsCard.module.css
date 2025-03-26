@@ -1,4 +1,4 @@
-.services-card-container {
+.about-us-card-container {
   position: sticky;
   top: 7rem;
   display: flex;
@@ -7,7 +7,7 @@
   height: 90vh;
 }
 
-.services-card {
+.about-us-card {
   position: relative;
   width: 95%;
   border-radius: 2.5rem;
@@ -17,14 +17,14 @@
   padding: 4rem;
 }
 
-.services-card h2 {
+.about-us-card h2 {
   font-size: 4.5rem;
   line-height: 5rem;
   max-width: 5rem;
   text-align: left;
 }
 
-.services-card-content {
+.about-us-card-content {
   display: grid;
   grid-template-columns: 0.9fr 1fr;
   gap: 5.5rem;
@@ -32,58 +32,58 @@
   align-items: center;
 }
 
-.services-card-description {
+.about-us-card-description {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   color: white;
 }
 
-.services-card-description p {
+.about-us-card-description p {
   line-height: 1.8rem;
   text-align: justify;
 }
 
-.services-card-img-container {
+.about-us-card-img-container {
   position: relative;
   width: 100%;
   height: 57vh;
   border-radius: 2.5rem;
   overflow: hidden;
-  .services-card-img-container-inner {
+  .about-us-card-img-container-inner {
     width: 100%;
     height: 100%;
   }
-  .services-card-img {
+  .about-us-card-img {
     object-fit: cover;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .services-card-container {
+  .about-us-card-container {
     height: 65vh;
     margin-top: 5rem;
   }
 
-  .services-card {
+  .about-us-card {
     width: 100%;
     padding: 2.5rem;
   }
 
-  .services-card-content {
+  .about-us-card-content {
     display: flex;
     flex-direction: column-reverse;
     gap: 2rem;
   }
 
-  .services-card h2 {
+  .about-us-card h2 {
     font-size: 2.5rem;
     line-height: 2.5rem;
     max-width: none;
     text-align: left;
   }
 
-  .services-card-img-container {
+  .about-us-card-img-container {
     width: 100%;
     height: 30vh;
     border-radius: 2rem;

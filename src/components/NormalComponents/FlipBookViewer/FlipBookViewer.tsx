@@ -10,8 +10,10 @@ const FlipBookViewer = () => {
   //   "https://www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf"
   // );
 
-  const pdfUrl =
-    "https://cors-anywhere.herokuapp.com/https://www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf";
+  // const pdfUrl =
+  //   "https://cors-anywhere.herokuapp.com/https://www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf";
+
+  const pdfUrl = "/flipBook/books/dark-ocean-brochure.pdf";
 
   const openFlipBook = () => {
     setIsFlipbookOpen(true);
