@@ -1,0 +1,82 @@
+.container {
+  width: 100%;
+  /* max-width: 90vh; */
+  color: var(--primary-blue);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.heading {
+  font-weight: 400;
+}
+
+.filters {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.filters input,
+.filters select {
+  flex: 1 1 200px;
+  padding: 0.9rem;
+  height: 3rem;
+  border: 1.5px solid #e7e7e7;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  color: #757575;
+  font-weight: 400;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.filters select {
+  /* Removing native styling */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("/icons/dropdown.svg");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+}
+
+.filters button {
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+}
+
+.resetBtn {
+  background-color: #dddddd;
+  color: var(--primary-blue);
+  border: 1.5px solid #e7e7e7;
+}
+
+.resetBtn:hover {
+  background-color: #bebebe;
+}
+
+.job-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (hover: hover) {
+}
+
+@media screen and (max-width: 700px) {
+  .filters {
+    flex-direction: column;
+  }
+
+  .filters input,
+  .filters select {
+    flex: auto;
+    height: 3rem;
+  }
+
+  .job-details-list {
+    flex-direction: column;
+  }
+}

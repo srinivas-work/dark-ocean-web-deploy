@@ -1,6 +1,7 @@
 import {
   AboutUsCardType,
   EarthCoreScaleDataInfoType,
+  JobItemType,
   PartnerDataItemType,
   PlaceItemType,
   PressItemType,
@@ -13,6 +14,7 @@ const navLinks = [
   { path: "/press-release", label: "Press Release" },
   { path: "/contact", label: "Contact" },
   { path: "/career", label: "Career" },
+  { path: "/cq-web", label: "Timelessly etched by Crayon & Quill" },
 ];
 
 const serviceList = [
@@ -25,6 +27,30 @@ const serviceList = [
   "Robotics",
   "Geotechnical Solutions",
   "Vessel Management",
+];
+
+const jobsList: JobItemType[] = [
+  {
+    title: "Front Office Assistant",
+    location: "Darkocean Marine Ltd., UK",
+    category: "Front Desk",
+    validity: "09 May",
+    link: "https://in.linkedin.com/company/darkoceanmarine",
+  },
+  {
+    title: "Human Resource Manager",
+    location: "Darkocean, Doha, Qatar",
+    category: "HR",
+    validity: "05 Feb",
+    link: "https://in.linkedin.com/company/darkoceanmarine",
+  },
+  {
+    title: "Wordpress Developer",
+    location: "Darkocean, Doha, Qatar",
+    category: "IT",
+    validity: "05 Feb",
+    link: "https://in.linkedin.com/company/darkoceanmarine",
+  },
 ];
 
 //const servicesList = []
@@ -392,6 +418,8 @@ const pressReleaseList: PressItemType[] = [
   },
 ];
 
+const jobCategoryList = ["All", "Front Desk", "HR", "IT"];
+
 const placeList: PlaceItemType[] = [
   {
     place: "Qatar",
@@ -399,6 +427,7 @@ const placeList: PlaceItemType[] = [
     fax: "+974 4441 7003",
     address:
       "Darkocean, Office 9, Ground Floor, Building 2, Financial Square, Doha",
+    shortAddress: "Darkocean, Doha, Qatar",
   },
   {
     place: "United Arab Emirates",
@@ -430,4 +459,6 @@ export {
   sustainabilityData,
   timelineData,
   aboutUsCardList,
+  jobsList,
+  jobCategoryList,
 };

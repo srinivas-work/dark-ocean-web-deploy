@@ -1,6 +1,9 @@
 import { HTMLProps, useRef } from "react";
 import { useCustomRouter } from "../../../../store/useCustomRouter";
-import { useServiceOverlayStore } from "../../../../store/useOverlay";
+import {
+  useCareerOverlayStore,
+  useServiceOverlayStore,
+} from "../../../../store/useOverlay";
 import SocialMediaIconSet from "../../UI/SocialMediaIconSet/SocialMediaIconSet";
 import { navLinks, serviceList } from "../../utils/data/dataHolder";
 import useIsPhoneScreen from "../../utils/hooks/useIsPhoneScreen";
@@ -10,10 +13,23 @@ const Footer: React.FC<HTMLProps<HTMLElement>> = ({ ...props }) => {
   const footerRef = useRef<HTMLElement>(null);
   const isMobileScreen = useIsPhoneScreen();
   const { toggle } = useServiceOverlayStore();
+  const { toggle: careerOverlayToogle } = useCareerOverlayStore();
   const { setChosenRoute } = useCustomRouter();
 
   const mapClickHandler = () => {
     window.open("https://maps.app.goo.gl/4PE6kYdietdXar1X8", "_blank");
+  };
+
+  const quickMenuItemClickHandler = (index: number) => {
+    if (index === navLinks.length - 1) {
+      return window.open(
+        "https://in.linkedin.com/company/crayon-and-quill",
+        "_blank"
+      );
+    } else if (navLinks[index].path === "/career") {
+      return careerOverlayToogle();
+    }
+    setChosenRoute(navLinks[index].path);
   };
 
   // const getPageLinks = (path: string, label: string) => {
@@ -37,7 +53,14 @@ const Footer: React.FC<HTMLProps<HTMLElement>> = ({ ...props }) => {
           <h3 className={styles["footer-headings"]}>Quick Menu</h3>
           <ul className={styles["footer-clickable-list"]}>
             {navLinks.map((navItem, index) => (
-              <li key={index} onClick={() => setChosenRoute(navItem.path)}>
+              <li
+                key={index}
+                onClick={() => quickMenuItemClickHandler(index)}
+                id={index === navLinks.length - 1 ? styles["cq-text"] : ""}
+              >
+                {index === navLinks.length - 1 && (
+                  <img src="/icons/cq_logo.svg" alt="Crayon and Quill" />
+                )}
                 {navItem.label}
               </li>
             ))}

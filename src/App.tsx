@@ -3,7 +3,9 @@ import styles from "./App.module.css";
 import Footer from "./components/NormalComponents/Footer/Footer";
 import Header from "./components/NormalComponents/Header/Header";
 import ContactUsOverlay from "./components/NormalComponents/Overlays/ContactUsOverlay/ContactUsOverlay";
+import CareerOverlay from "./components/NormalComponents/Overlays/JobOverlay/CareerOverlay";
 import ServicesOverlay from "./components/NormalComponents/Overlays/ServicesOverlay/ServicesOverlay";
+import Test from "./components/NormalComponents/Test";
 import AnimatedContactButton from "./components/UI/AnimatedContactButton/AnimatedContactButton";
 import LenisScrollHelper from "./components/utils/helpers/LenisScrollHelper";
 import AboutUsPage from "./pages/AboutUsPage/AboutUsPage";
@@ -11,7 +13,6 @@ import HomePage from "./pages/HomePage/HomePage";
 import BlogPage from "./pages/PressReleasePage/BlogPage/BlogPage";
 import PressReleasePage from "./pages/PressReleasePage/PressReleasePage";
 import ServicePage from "./pages/ServicePage/ServicePage";
-import Test from "./components/NormalComponents/Test";
 
 const routes = [
   { path: "/", element: <HomePage /> },
@@ -55,6 +56,7 @@ const App = () => {
       {!isHomePage && <Footer className={styles.Footer} />}
       <ContactUsOverlay />
       <ServicesOverlay />
+      <CareerOverlay />
     </>
   );
 };

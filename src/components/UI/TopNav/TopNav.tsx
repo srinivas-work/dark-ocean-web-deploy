@@ -4,7 +4,10 @@ import { useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import useIsPhoneScreen from "../../utils/hooks/useIsPhoneScreen";
 import styles from "./TopNav.module.css";
-import { useContactOverlayStore } from "../../../../store/useOverlay";
+import {
+  useCareerOverlayStore,
+  useContactOverlayStore,
+} from "../../../../store/useOverlay";
 import { navLinks } from "../../utils/data/dataHolder";
 
 const NAV_ANIMATION = {
@@ -23,6 +26,7 @@ const TopNav: React.FC<{ onHamburgerOpen: (isOpen: boolean) => void }> = ({
 }) => {
   const navRef = useRef<HTMLElement | null>(null);
   const { toggle } = useContactOverlayStore();
+  const { toggle: careerOverlayToogle } = useCareerOverlayStore();
   const location = useLocation();
   const isHomePage = location.pathname === "/";
   const isServicePage = location.pathname === "/services";
@@ -81,7 +85,8 @@ const TopNav: React.FC<{ onHamburgerOpen: (isOpen: boolean) => void }> = ({
         <ul style={{ color: isHomePage ? "white" : "var(--primary-blue)" }}>
           {navLinks.map(
             ({ path, label }, index) =>
-              label !== "Career" && (
+              label !== "Career" &&
+              path !== "/cq-web" && (
                 <li
                   key={index}
                   onClick={label === "Contact" ? toggle : undefined}
@@ -90,15 +95,7 @@ const TopNav: React.FC<{ onHamburgerOpen: (isOpen: boolean) => void }> = ({
                 </li>
               )
           )}
-          <li>
-            <a
-              href="https://www.linkedin.com/company/darkoceanmarine/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Career
-            </a>
-          </li>
+          <li onClick={careerOverlayToogle}>Career</li>
         </ul>
       </motion.nav>
     </>

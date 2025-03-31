@@ -25,7 +25,10 @@
   --primary-blue: #00284f;
   --secondary-blue: #114ec9;
   --primary-orange: #ee7321;
+  --dusty-blue: #727d86;
   --primary-gray: #535353;
+
+  --border-radius: 0.8rem;
   --light-gray: #efeeee;
 
   --spacing: 4rem;
@@ -78,9 +81,10 @@ button {
   font-family: inherit;
   background-color: #f9f9f9;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: all 0.5s ease-in-out;
   border: none;
   outline: none;
+  user-select: none;
 }
 
 @media screen and (max-width: 700px) {

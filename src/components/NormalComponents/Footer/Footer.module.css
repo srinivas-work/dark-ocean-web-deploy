@@ -48,6 +48,20 @@
   font-size: 0.8rem;
 }
 
+#cq-text {
+  max-width: 10rem;
+  margin-top: 20%; /*Overriding the default styles*/
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.7rem;
+  font-style: italic;
+}
+
+#cq-text img {
+  width: 2.3rem;
+}
+
 .footer-details-container ul .footer-contact-details {
   color: white;
 }

@@ -50,4 +50,17 @@ export type PlaceItemType = {
   phone: string;
   fax?: string;
   address: string;
+  shortAddress?: string;
+};
+
+export type JobItemType = {
+  title: string;
+  location:
+    | "Darkocean, Doha, Qatar"
+    | "Darkocean Geostar, Abu Dhabi, UAE"
+    | "Darkocean Marine Ltd., UK"
+    | "Darkocean Marine Pvt. Ltd., India";
+  category: "Front Desk" | "HR" | "IT";
+  validity?: string;
+  link: string;
 };
